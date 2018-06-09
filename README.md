@@ -18,8 +18,16 @@ to run on our Raspberry Pi. Sounds simple, right? Well, there are a lot of tiny
 details we need to cover, but that is the gist of it. Let's get started.
 
 # building the cross compiler
-[TODO]
+The build & host machine I'll be using is Fedora 28 which is running in a
+VirtualBox image on my Macbook Pro Retina Late 2012 (Macbook Pro 10,1)
 
-# resources
-I owe tremendous credit to the following resources:
+To perform building the cross compiler I followed the following guide, modifying
+commands as needded (the guide was using Ubuntu as the build machine).
+
+I owe tremendous credit to the following resource:
 * [Building GCC as a cross compiler for Raspberry Pi](https://solarianprogrammer.com/2018/05/06/building-gcc-cross-compiler-raspberry-pi/)
+
+
+[ TODO ]
+- STOPPING POINT: start of compilation of cross compiler gcc-6.3.0. Need to
+    complete, having errors
