@@ -27,7 +27,14 @@ commands as needded (the guide was using Ubuntu as the build machine).
 I owe tremendous credit to the following resource:
 * [Building GCC as a cross compiler for Raspberry Pi](https://solarianprogrammer.com/2018/05/06/building-gcc-cross-compiler-raspberry-pi/)
 
+When building the first portion of gcc, had to modify some things before running
+`make install-gcc`
+* while in the build-gcc dir, ran: `cp -r
+    ./build-x86_64-pc-linux-gnu/fixincludes ./`
+* also, modified ./fixincludes/Makefile line 37 to remove one level of `../` 
+    * and line 52 to set gcc_version to `6.3.0`
+* before running `make install-gcc` i had to singlely compile libiberty myself:
+    `cd libiberty && make`
 
-[ TODO ]
-- STOPPING POINT: start of compilation of cross compiler gcc-6.3.0. Need to
-    complete, having errors
+[STOPPING POINT] - need to continue by building (partially) glibc, then
+completing gcc, then completing glibc, then we should be ready!
